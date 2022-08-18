@@ -13,7 +13,7 @@ for (( ; ; )) ;do
 				echo $Instance is running
 				echo ---------------------------------------------------------------------
 			else 
-				echo echo $(date +"%D %T") ": FAILURE" 
+				echo $(date +"%D %T") ": FAILURE" 
 				echo $Instance is not running
 				echo I will try to launch instance $Instance again for you, Please hold on.
 				aws ec2 start-instances --instance-ids $Instance 1> /dev/null
